@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane fx:id="infofournisseur" prefHeight="443.0" prefWidth="767.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.infofournisseur">
+   <children>
+      <Button fx:id="updatef" layoutX="40.0" layoutY="283.0" mnemonicParsing="false" onAction="#updatefournisseur" prefHeight="41.0" prefWidth="106.0" style="-fx-background-color: #516bc9;" stylesheets="@../css/style.css" text="Update" textFill="#f7f9ff">
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8_update_left_rotation_24px_1.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="numtelf" layoutX="40.0" layoutY="199.0" prefHeight="32.0" prefWidth="179.0" promptText="numtel" />
+      <TableView fx:id="tablelivraison" layoutX="367.0" layoutY="55.0" onMouseClicked="#detaillivraison" prefHeight="159.0" prefWidth="344.0" visible="false">
+         <columns>
+            <TableColumn fx:id="idlivraisonf" prefWidth="75.0" text="ID-livraison" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label layoutX="376.0" layoutY="224.0" prefHeight="32.0" prefWidth="142.0" text="Detail livraison">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="idf" layoutX="42.0" layoutY="107.0" prefHeight="32.0" prefWidth="142.0" text="ID">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="detaillivraison" layoutX="366.0" layoutY="256.0" onMouseClicked="#detaillivraison" prefHeight="181.0" prefWidth="380.0" visible="false">
+         <columns>
+            <TableColumn fx:id="idmed" prefWidth="75.0" text="idmed" />
+            <TableColumn fx:id="nommed" prefWidth="75.0" text="nom-med" />
+            <TableColumn fx:id="qte" prefWidth="75.0" text="qte" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <TextField fx:id="nomf" layoutX="40.0" layoutY="148.0" prefHeight="32.0" prefWidth="179.0" promptText="nom" />
+      <Button fx:id="afficherlivraison" layoutX="367.0" layoutY="6.0" mnemonicParsing="false" onAction="#afficherlivraison" prefHeight="41.0" prefWidth="210.0" style="-fx-background-color: #516bc9;" stylesheets="@../css/style.css" text="Afficher les livraisons" textFill="#f7f9ff">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="livraison" layoutX="39.0" layoutY="236.0" mnemonicParsing="false" onAction="#affecterlivraison" prefHeight="41.0" prefWidth="210.0" style="-fx-background-color: #516bc9;" stylesheets="@../css/style.css" text="Recevoire Livraison " textFill="#f7f9ff">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="521.0" prefWidth="861.0" style="-fx-background-color: #A2D9CE;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.addfournisseur">
+   <children>
+      <AnchorPane fx:id="addfournisseurfenetre" layoutX="40.0" layoutY="24.0" prefHeight="474.0" prefWidth="782.0" style="-fx-background-color: white;" stylesheets="@../css/style.css">
+         <children>
+            <Button fx:id="anu" layoutX="572.0" layoutY="420.0" mnemonicParsing="false" onAction="#anu" prefHeight="38.0" prefWidth="85.0" styleClass="btn" stylesheets="@../css/style.css" text="Anuller" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="ajouter" layoutX="688.0" layoutY="420.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="38.0" prefWidth="85.0" styleClass="btn" stylesheets="@../css/style.css" text="Ajouter" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="311.0" layoutY="35.0" prefHeight="31.0" prefWidth="225.0" text="Ajouter un Fournisseur" textAlignment="CENTER" textFill="#a2d9ce">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="67.0" layoutY="113.0" prefHeight="31.0" prefWidth="202.0" text="Nom du Fournisseur :" textAlignment="CENTER" textFill="#a2d9ce">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="67.0" layoutY="207.0" prefHeight="31.0" prefWidth="217.0" text="Numéro Téléphone    :" textAlignment="CENTER" textFill="#a2d9ce">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="419.0" layoutY="66.0" startX="-100.0" stroke="#a2d9ce" />
+            <Line endX="68.0" layoutX="149.0" layoutY="144.0" startX="-89.0" stroke="#a2d9ce" />
+            <Line endX="100.0" layoutX="135.0" layoutY="244.0" startX="-81.0" stroke="#a2d9ce" />
+            <TextField fx:id="nom" layoutX="296.0" layoutY="116.0" prefHeight="31.0" prefWidth="264.0" />
+            <TextField fx:id="num" layoutX="296.0" layoutY="207.0" prefHeight="31.0" prefWidth="264.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

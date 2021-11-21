@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="518.0" prefWidth="835.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.informationmedcin">
+   <children>
+      <AnchorPane fx:id="infoclient" layoutX="37.0" layoutY="31.0" prefHeight="456.0" prefWidth="767.0" style="-fx-background-color: #A2D9CE;">
+         <children>
+            <Label fx:id="id" layoutX="14.0" layoutY="44.0" prefHeight="32.0" prefWidth="142.0" text="ID">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nom" layoutX="14.0" layoutY="91.0" prefHeight="32.0" prefWidth="179.0" promptText="Nom" />
+            <TextField fx:id="prenom" layoutX="14.0" layoutY="146.0" prefHeight="32.0" prefWidth="179.0" promptText="Prenom" />
+            <TableView fx:id="tablecommandemedcin" layoutX="340.0" layoutY="68.0" onMouseClicked="#detailcommandebtn" prefHeight="150.0" prefWidth="380.0" visible="false">
+               <columns>
+                  <TableColumn fx:id="idcommande" prefWidth="75.0" text="ID-commande" />
+                  <TableColumn fx:id="prixcommande" prefWidth="75.0" text="Prix" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <TableView fx:id="tableachatmedcin" layoutX="340.0" layoutY="274.0" onMouseClicked="#detailachatbtn" prefHeight="167.0" prefWidth="380.0" visible="false">
+               <columns>
+                  <TableColumn fx:id="idachat" prefWidth="75.0" text="ID-achat" />
+                  <TableColumn fx:id="prixachat" prefWidth="75.0" text="Prix" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Button fx:id="update" layoutX="27.0" layoutY="347.0" mnemonicParsing="false" onAction="#update" prefHeight="41.0" prefWidth="106.0" style="-fx-background-color: #516bc9;" stylesheets="@../css/style.css" text="Update">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/icons8_update_left_rotation_24px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="affichercommandes" layoutX="340.0" layoutY="15.0" mnemonicParsing="false" onAction="#affichercommandes" prefHeight="41.0" prefWidth="166.0" stylesheets="@../css/style.css" text="Afficher les commandes">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="afficherachats" layoutX="340.0" layoutY="225.0" mnemonicParsing="false" onAction="#afficherachats" prefHeight="41.0" prefWidth="166.0" stylesheets="@../css/style.css" text="Afficher les achats">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="age" layoutX="14.0" layoutY="196.0" prefHeight="32.0" prefWidth="179.0" promptText="Age" />
+            <TextField fx:id="adresse" layoutX="14.0" layoutY="250.0" prefHeight="32.0" prefWidth="179.0" promptText="Adresse" />
+            <TextField fx:id="spacialite" layoutX="14.0" layoutY="299.0" prefHeight="32.0" prefWidth="179.0" promptText="specialite" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

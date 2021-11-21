@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="javafx-preloader" name="pharmacie">
+    <output-path>$PROJECT_DIR$/out/artifacts/pharmacie</output-path>
+    <properties id="javafx-preloader-properties">
+      <options>
+        <option name="preloaderClass" value="sample.Main" />
+      </options>
+    </properties>
+    <root id="archive" name="pharmacie.jar" />
+  </artifact>
+</component>

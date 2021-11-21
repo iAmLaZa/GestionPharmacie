@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="599.0" prefWidth="762.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.caisseprod">
+   <children>
+      <AnchorPane fx:id="Produit" layoutX="10.0" layoutY="13.0" prefHeight="644.0" prefWidth="755.0" stylesheets="@../css/style.css">
+         <children>
+            <AnchorPane fx:id="medicamentftr" layoutY="59.0" prefHeight="528.0" prefWidth="755.0" style="-fx-background-color: #A2D9CE;" visible="false">
+               <children>
+                  <TableView fx:id="tablemedext" layoutX="17.0" layoutY="108.0" onKeyPressed="#searchmedext" onMouseClicked="#getmedext" prefHeight="294.0" prefWidth="715.0" visible="false">
+                     <columns>
+                        <TableColumn fx:id="idmedext" prefWidth="62.0" text="ID-med" />
+                        <TableColumn fx:id="nommedext" prefWidth="76.0" text="NOM-med" />
+                        <TableColumn fx:id="typemedext" prefWidth="71.0" text="TYPE-med" />
+                        <TableColumn fx:id="modepriseext" prefWidth="106.0" text="MODEPRISE-med" />
+                        <TableColumn fx:id="ordext" prefWidth="60.0" text="ORDrequise" />
+                        <TableColumn fx:id="prixmedext" prefWidth="75.0" text="PRIX-med" />
+                        <TableColumn fx:id="remiseext" prefWidth="93.0" text="remise" />
+                        <TableColumn fx:id="Qteext" prefWidth="90.0" text="Qte" />
+                        <TableColumn fx:id="qteminext" prefWidth="81.0" text="qtemin" />
+                     </columns>
+                  </TableView>
+                  <TextField id="text" fx:id="searchmedint" layoutX="158.0" layoutY="53.0" onKeyPressed="#searchmedint" prefHeight="31.0" prefWidth="233.0" style="-fx-border-radius: 10;" styleClass="text" stylesheets="@../css/style.css" visible="false" />
+                  <Label layoutX="20.0" layoutY="53.0" prefHeight="31.0" prefWidth="119.0" text="Rechercher" textAlignment="CENTER" textFill="#fcf9f9">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXRadioButton fx:id="jfxinterne" layoutX="19.0" layoutY="11.0" onAction="#radiointernemenu" text="Interne" textFill="#f6fcfa">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="jfxexterne" layoutX="172.0" layoutY="11.0" onAction="#radioexternemenu" text="Externe" textFill="#f6fcfa">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <Label layoutX="21.0" layoutY="442.0" prefHeight="31.0" prefWidth="119.0" text="QTE :">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="qtemedachat" layoutX="107.0" layoutY="440.0" prefHeight="35.0" prefWidth="188.0" />
+                  <Button fx:id="ajoutermed" layoutX="629.0" layoutY="479.0" mnemonicParsing="false" onAction="#ajoutermed" prefHeight="41.0" prefWidth="106.0" stylesheets="@../css/style.css" text="Ajouter">
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/icons8_plus_52px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="307.0" layoutY="441.0" prefHeight="35.0" prefWidth="85.0" text="Durée :">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tablemedint" layoutX="5.0" layoutY="108.0" onMouseClicked="#getmedint" prefHeight="294.0" prefWidth="731.0" visible="false">
+                    <columns>
+                      <TableColumn fx:id="idmedint" prefWidth="75.0" text="ID-med" />
+                      <TableColumn fx:id="nommedint" prefWidth="75.0" text="NOM-med" />
+                        <TableColumn fx:id="typemedint" prefWidth="75.0" text="TYPE-med" />
+                        <TableColumn fx:id="modepriseint" prefWidth="75.0" text="MODEP-med" />
+                        <TableColumn fx:id="ordint" prefWidth="75.0" text="ORD-requise" />
+                        <TableColumn fx:id="prixmedint" prefWidth="75.0" text="PRIX-med" />
+                        <TableColumn fx:id="Qteint" prefWidth="75.0" text="Qte" />
+                        <TableColumn fx:id="qteminint" prefWidth="75.0" text="qtemin" />
+                        <TableColumn fx:id="remiseint" prefWidth="75.0" text="remise" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <TextField fx:id="searchmedext" layoutX="172.0" layoutY="56.0" onKeyPressed="#searchmedext" prefHeight="31.0" prefWidth="233.0" />
+                  <DatePicker fx:id="duree" layoutX="405.0" layoutY="442.0" prefHeight="35.0" prefWidth="209.0" />
+               </children>
+            </AnchorPane>
+            <JFXRadioButton fx:id="jfxpara" layoutX="294.0" layoutY="17.0" onAction="#radioparamenu" text="Produits Parapharmacetiques" textFill="#a2d9ce">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="jfxmed" layoutX="20.0" layoutY="17.0" onAction="#radiomedmenu" text="Médicament" textFill="#a2d9ce">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXRadioButton>
+            <AnchorPane fx:id="parapharmacetiqueftr" layoutX="-5.0" layoutY="88.0" prefHeight="494.0" prefWidth="755.0" style="-fx-background-color: #A2D9CE;" visible="false">
+               <children>
+                  <TableView fx:id="tablepara" layoutX="20.0" layoutY="46.0" onMouseClicked="#getpara" prefHeight="395.0" prefWidth="715.0">
+                     <columns>
+                        <TableColumn fx:id="idpara" prefWidth="75.0" text="ID-prod" />
+                        <TableColumn fx:id="nompara" prefWidth="75.0" text="NOM-prod" />
+                        <TableColumn fx:id="typepara" prefWidth="75.0" text="TYPE-prod" />
+                        <TableColumn fx:id="prixpara" prefWidth="75.0" text="PRIX-prod" />
+                        <TableColumn fx:id="Qte" prefWidth="75.0" text="Qte" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <TextField id="text" fx:id="searchpara" layoutX="158.0" layoutY="8.0" onKeyPressed="#searchpara" prefHeight="31.0" prefWidth="233.0" style="-fx-border-radius: 10;" styleClass="text" stylesheets="@../css/style.css" />
+                  <Label layoutX="20.0" layoutY="8.0" prefHeight="31.0" prefWidth="119.0" text="Rechercher" textAlignment="CENTER" textFill="#fcf9f9">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="24.0" layoutY="450.0" prefHeight="31.0" prefWidth="119.0" text="QTE :">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="qteachatpara" layoutX="107.0" layoutY="445.0" prefHeight="35.0" prefWidth="188.0" />
+                  <Button fx:id="ajouterpara" layoutX="628.0" layoutY="448.0" mnemonicParsing="false" onAction="#ajouterpara" prefHeight="18.0" prefWidth="106.0" stylesheets="@../css/style.css" text="Ajouter">
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/icons8_plus_52px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Button fx:id="valider" layoutX="631.0" layoutY="590.0" mnemonicParsing="false" onAction="#valider" prefHeight="41.0" prefWidth="106.0" stylesheets="@../css/style.css" text="Valider">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/icons8_verified_account_48px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

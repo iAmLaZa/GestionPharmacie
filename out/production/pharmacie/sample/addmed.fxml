@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="548.0" prefWidth="976.0" style="-fx-background-color: #A2D9CE;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Addmed">
+   <children>
+      <AnchorPane fx:id="addmedciament" layoutX="75.0" layoutY="34.0" prefHeight="480.0" prefWidth="833.0" style="-fx-background-color: white;" stylesheets="@../css/style.css">
+         <children>
+            <Button fx:id="anuller" layoutX="572.0" layoutY="420.0" mnemonicParsing="false" onAction="#anuller" prefHeight="38.0" prefWidth="85.0" styleClass="btn" stylesheets="@../css/style.css" text="Anuller" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="suivant" layoutX="696.0" layoutY="420.0" mnemonicParsing="false" onAction="#suivant" prefHeight="38.0" prefWidth="85.0" styleClass="btn" stylesheets="@../css/style.css" text="Suivant" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="300.0" layoutY="35.0" prefHeight="31.0" prefWidth="245.0" text="Ajouter un medicament" textAlignment="CENTER" textFill="#a2d9ce">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="67.0" layoutY="113.0" prefHeight="31.0" prefWidth="257.0" text="Nom du medicament:" textAlignment="CENTER" textFill="#a2d9ce">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="67.0" layoutY="176.0" prefHeight="31.0" prefWidth="202.0" text="Type medicament   :" textAlignment="CENTER" textFill="#a2d9ce">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="67.0" layoutY="235.0" prefHeight="31.0" prefWidth="202.0" text="Mode prise   :" textAlignment="CENTER" textFill="#a2d9ce">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="419.0" layoutY="66.0" startX="-100.0" stroke="#a2d9ce" />
+            <Line endX="68.0" layoutX="149.0" layoutY="144.0" startX="-89.0" stroke="#a2d9ce" />
+            <Line endX="100.0" layoutX="138.0" layoutY="211.0" startX="-81.0" stroke="#a2d9ce" />
+            <Line endX="100.0" layoutX="135.0" layoutY="272.0" startX="-81.0" stroke="#a2d9ce" />
+            <JFXToggleButton fx:id="ord" layoutX="293.0" layoutY="287.0" text=" " />
+            <Label layoutX="59.0" layoutY="298.0" prefHeight="31.0" prefWidth="225.0" text="ORDrequise     :" textAlignment="CENTER" textFill="#a2d9ce">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Line endX="58.0" layoutX="139.0" layoutY="334.0" startX="-81.0" stroke="#a2d9ce" />
+            <TextField fx:id="nom" layoutX="313.0" layoutY="113.0" prefHeight="31.0" prefWidth="225.0" />
+            <ChoiceBox fx:id="typemed" layoutX="313.0" layoutY="173.0" prefHeight="31.0" prefWidth="225.0" />
+            <ChoiceBox fx:id="modeprise" layoutX="313.0" layoutY="235.0" prefHeight="31.0" prefWidth="225.0" />
+            <TextField id="text" fx:id="qtemin" layoutX="207.0" layoutY="352.0" prefHeight="31.0" prefWidth="233.0" style="-fx-border-radius: 10;" styleClass="text" stylesheets="@../css/style.css" />
+            <Label layoutX="69.0" layoutY="352.0" prefHeight="31.0" prefWidth="119.0" text="QTE-min" textAlignment="CENTER" textFill="#a2d9ce">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField id="text" fx:id="Qte" layoutX="673.0" layoutY="111.0" prefHeight="31.0" prefWidth="151.0" style="-fx-border-radius: 10;" styleClass="text" stylesheets="@../css/style.css" />
+            <Label layoutX="553.0" layoutY="111.0" prefHeight="31.0" prefWidth="85.0" text="QTE" textAlignment="CENTER" textFill="#a2d9ce">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField id="text" fx:id="prix" layoutX="673.0" layoutY="166.0" prefHeight="31.0" prefWidth="151.0" style="-fx-border-radius: 10;" styleClass="text" stylesheets="@../css/style.css" />
+            <Label layoutX="553.0" layoutY="166.0" prefHeight="31.0" prefWidth="85.0" text="PRIX" textAlignment="CENTER" textFill="#a2d9ce">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField id="text" fx:id="remise" layoutX="673.0" layoutY="225.0" prefHeight="31.0" prefWidth="151.0" style="-fx-border-radius: 10;" styleClass="text" stylesheets="@../css/style.css" />
+            <Label layoutX="553.0" layoutY="225.0" prefHeight="31.0" prefWidth="85.0" text="Remise" textAlignment="CENTER" textFill="#a2d9ce">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

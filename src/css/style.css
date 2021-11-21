@@ -1,0 +1,9 @@
+.btn{
+    -fx-background-color:  #A2D9CE;
+}
+.btn:hover{
+     -fx-background-color: #F5B7B1 ;
+ }
+ .text{
+ -fx-background-raduis :10 ,10 ,0;
+ }

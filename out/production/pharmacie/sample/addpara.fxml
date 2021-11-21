@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Addpara">
+   <children>
+      <Button fx:id="anuller" layoutX="582.0" layoutY="430.0" mnemonicParsing="false" onAction="#anulle" prefHeight="38.0" prefWidth="85.0" styleClass="btn" stylesheets="@../css/style.css" text="Anuller" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="Ajouter" layoutX="706.0" layoutY="430.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="38.0" prefWidth="85.0" styleClass="btn" stylesheets="@../css/style.css" text="Ajouter" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="77.0" layoutY="135.0" prefHeight="31.0" prefWidth="209.0" text="Nom du Produit:" textAlignment="CENTER" textFill="#a2d9ce">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="198.0" prefHeight="31.0" prefWidth="202.0" text="Type Produit   :" textAlignment="CENTER" textFill="#a2d9ce">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nom" layoutX="323.0" layoutY="135.0" prefHeight="31.0" prefWidth="225.0" />
+      <ChoiceBox fx:id="typeprod" layoutX="323.0" layoutY="195.0" prefHeight="31.0" prefWidth="225.0" />
+      <TextField id="text" fx:id="qte" layoutX="200.0" layoutY="266.0" prefHeight="31.0" prefWidth="151.0" style="-fx-border-radius: 10;" styleClass="text" stylesheets="@../css/style.css" />
+      <TextField id="text" fx:id="prix" layoutX="200.0" layoutY="321.0" prefHeight="31.0" prefWidth="151.0" style="-fx-border-radius: 10;" styleClass="text" stylesheets="@../css/style.css" />
+      <Label layoutX="77.0" layoutY="266.0" prefHeight="31.0" prefWidth="85.0" text="QTE" textAlignment="CENTER" textFill="#a2d9ce">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="321.0" prefHeight="31.0" prefWidth="85.0" text="PRIX" textAlignment="CENTER" textFill="#a2d9ce">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="286.0" layoutY="42.0" prefHeight="31.0" prefWidth="344.0" text="Ajouter produit parapharmacetique" textAlignment="CENTER" textFill="#a2d9ce">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

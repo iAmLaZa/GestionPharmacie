@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="825.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.caisseclient">
+   <children>
+      <AnchorPane fx:id="anchorclient" layoutX="100.0" layoutY="63.0" prefHeight="486.0" prefWidth="649.0" style="-fx-background-color: #A2D9CE;" visible="false">
+         <children>
+            <TextField id="text" fx:id="search" layoutX="152.0" layoutY="53.0" onKeyPressed="#searchclient" prefHeight="31.0" prefWidth="233.0" style="-fx-border-radius: 10;" styleClass="text" stylesheets="@../css/style.css" />
+            <TableView fx:id="tableclient" layoutX="16.0" layoutY="105.0" onMouseClicked="#affecter" prefHeight="353.0" prefWidth="616.0">
+               <columns>
+                  <TableColumn fx:id="idclient" prefWidth="88.0" text="ID-CLIENT" />
+                  <TableColumn fx:id="nomclient" prefWidth="121.0" text="NOM" />
+                  <TableColumn fx:id="prenomclient" prefWidth="124.0" text="PRENOM" />
+                  <TableColumn fx:id="nsclient" prefWidth="126.0" text="NUM-SOCIAlL" />
+                  <TableColumn fx:id="mcclient" prefWidth="156.0" text="MALADIE-CHRONIQUE" />
+               </columns>
+            </TableView>
+            <Label layoutX="25.0" layoutY="53.0" prefHeight="31.0" prefWidth="119.0" text="Rechercher" textAlignment="CENTER" textFill="#fcf9f9">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXRadioButton fx:id="jfxmedcin" layoutX="374.0" layoutY="24.0" onAction="#radiomedcin" text="Medcin" textFill="#a2d9ce">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="jfxclient" layoutX="100.0" layoutY="24.0" onAction="#radioclient" text="Client " textFill="#a2d9ce">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXRadioButton>
+      <AnchorPane fx:id="anchormedcin" layoutX="86.0" layoutY="77.0" prefHeight="469.0" prefWidth="685.0" style="-fx-background-color: #A2D9CE;" visible="false">
+         <children>
+            <TextField id="text" fx:id="searchmc" layoutX="150.0" layoutY="43.0" onKeyPressed="#searchmedcin" prefHeight="31.0" prefWidth="233.0" style="-fx-border-radius: 10;" styleClass="text" stylesheets="@../css/style.css" />
+            <TableView fx:id="tablemedcin" layoutX="17.0" layoutY="93.0" onMouseClicked="#affecter" prefHeight="348.0" prefWidth="616.0">
+               <columns>
+                  <TableColumn fx:id="idmedcin" prefWidth="88.0" text="ID-medcin" />
+                  <TableColumn fx:id="nommedcin" prefWidth="121.0" text="NOM" />
+                  <TableColumn fx:id="prenommedcin" prefWidth="124.0" text="PRENOM" />
+                  <TableColumn fx:id="agemedcin" prefWidth="126.0" text="Age" />
+                  <TableColumn fx:id="adresse" prefWidth="75.0" text="adresse" />
+                  <TableColumn fx:id="specialite" prefWidth="75.0" text="specialite" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Label layoutX="23.0" layoutY="43.0" prefHeight="31.0" prefWidth="119.0" text="Rechercher" textAlignment="CENTER" textFill="#fcf9f9">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="valide" layoutX="662.0" layoutY="555.0" mnemonicParsing="false" onAction="#valider" prefHeight="41.0" prefWidth="106.0" stylesheets="@../css/style.css" text="Validé">
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8_verified_account_48px_1.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane fx:id="infocommandeftr" prefHeight="456.0" prefWidth="767.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Infocommande">
+   <children>
+      <TableView fx:id="infocommande" layoutX="53.0" layoutY="56.0" prefHeight="363.0" prefWidth="662.0" visible="false">
+         <columns>
+            <TableColumn fx:id="idmed" prefWidth="75.0" text="ID-med" />
+            <TableColumn fx:id="nommed" prefWidth="75.0" text="NOM-med" />
+            <TableColumn fx:id="qte" prefWidth="75.0" text="QTE" />
+            <TableColumn fx:id="prix" prefWidth="75.0" text="PRIX-unitaire" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <JFXToggleButton fx:id="jfxshow" layoutX="53.0" onAction="#showcommande" text="Show Information" />
+   </children>
+</AnchorPane>

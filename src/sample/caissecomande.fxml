@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="510.0" prefWidth="649.0" style="-fx-background-color: #A2D9CE;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Caissecommande">
+   <children>
+      <TextField id="text" fx:id="search" layoutX="152.0" layoutY="43.0" onKeyPressed="#searchcommande" prefHeight="31.0" prefWidth="233.0" style="-fx-border-radius: 10;" styleClass="text" stylesheets="@../css/style.css" />
+      <TableView fx:id="tablecommande" layoutX="25.0" layoutY="95.0" prefHeight="395.0" prefWidth="616.0">
+         <columns>
+            <TableColumn fx:id="idcommande" prefWidth="88.0" text="ID-Commande" />
+            <TableColumn fx:id="idclient" prefWidth="121.0" text="ID-Client" />
+            <TableColumn fx:id="prix" prefWidth="124.0" text="PRIX" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label layoutX="25.0" layoutY="43.0" prefHeight="31.0" prefWidth="119.0" text="Rechercher" textAlignment="CENTER" textFill="#fcf9f9">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
